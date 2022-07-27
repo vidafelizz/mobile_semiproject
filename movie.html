@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>movie</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+function name() {
+	alert("경고창");
+}
+
+function check() {
+	var userid = document.form1.userid.value;
+	var pwd = document.form1.pwd.value;
+	if(userid=="") {
+		alert("아이디를 입력하세요.")
+		document.form1.userid.focus();
+		return;
+	}
+	if(pwd=="") {
+		alert("비밀번호를 입력하세요.")
+		document.form1.pwd.focus();
+		ruturn;
+	}
+	document.form1.submit();
+}
+</script>
+</head>
+<body>
+ <div data-role="page" id="page1">
+  <div data-role="panel" id="panel1" data-display="overlay" data-theme="b">
+   <form name="form1" method="post" action="login_result.jsp">
+    <h1>로그인 패널</h1>
+    <label for="name">사용자명 : </label>
+    <input type="text" name="name" id="name" value="" data-mini="true" data-clear-btn="true">
+    <label for="password">비밀번호 : </label>
+    <input type="password" name="password" id="password" value="" data-mini="true" data-clear-btn="true">
+    <div class="ui-grid-a">
+     <div class="ui-block-a"><a href="#" data-role="button" data-rel="close">닫기</a></div>
+     <div class="ui-block-b"><input type="button" value="로그인" onclick="check()"></div>
+    </div>
+    <input type="button" value="회원가입" onClick="location.href='join_form.html'">
+   </form>
+  </div>
+  
+  <div data-role="header" id="header" data-position="fixed" data-theme="b" id="header">
+   <a href="index.html" data-icon="home">홈</a>
+   <h1>다큐영상</h1>
+  </div>
+  
+  <div data-role="content" style="background: #cd4b3e; color: white;">
+  <div style="text-align: center;">
+	<p><strong>작은 관심이 만드는 큰 기적</strong></p>
+   </div>
+  </div>
+  <div>
+  <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="검색 키워드를 입력하세요">
+  <li data-role="listdivider" data-theme="b">유투브</li>
+  <li>
+   <a href="https://youtu.be/gw5PdqOiodU" target="_blank" rel="external">
+    <p class="ui-li-aside">2022</p>
+    <h3 style="color: red">옷을 위한 지구는 없다</h3>
+    <p>장르 : 자연 & 생태 다큐멘터리 / 상영시간 : 50분</p>
+    <p>줄거리 : 옷을 쓰레기라 여기는 사람은 많지 않습니다. 누군가 입을 거라 생각하며 내어놓죠.<br>
+     그렇게 우리가 버린 옷이 바다 건너 거대한 무덤이 됐습니다. 매년 1000억 개가 탄생하고 그 중 1년 안에 사라지는 옷 330억 개.<br>
+     저렴한 가격에 고민 없이 산 뒤 한철 입고 버린 옷, 그 편리함의 대가는 누가 치르고 있을까요? 어제 산 티셔츠, 오늘 버린 청바지에 우리의 지구가 신음하고 있습니다.
+    </p>    
+   </a> 
+   </li>
+   <li>
+    <a href="#dialog1" data-role="button" data-rel="dialog">
+     <h3 style="color: red">붉은지구 (4부작)</h3>
+     <p class="ui-li-aside">2021</p>
+     <p>장르 : 자연 & 생태 다큐멘터리 / 상영시간 : 48분, 4부작</p>
+     <p>줄거리 : 치솟는 산불, 지구가 만들어낸 에너지 폭탄 / 가뭄과 폭우, 지구 물순환의 비밀 / 기후변화의 티핑포인트, 1.5도의 경고</p>
+    </a>  
+   </li> 
+   <li>
+    <a href="https://www.youtube.com/watch?v=19esmVJSkmU" target="_blank" rel="external">
+     <h3 style="color: red">하나뿐인 지구 - 히말라야 대재앙 빙하 쓰나미 </h3>
+     <p class="ui-li-aside">2014</p>
+     <p>장르 : 자연 & 생태 다큐멘터리 / 상영시간 : 35분</p>
+     <p>줄거리 : EBS <하나뿐인 지구>에서는 황폐한 지구 환경과 각박한 우리들의 삶을 바라보며 인간과 자연 간의 관계를 되짚습니다. <br>
+     우리 주변에서 일어나는 환경 문제는 물론, 사라진 자연과 인간 문화에 대한 이야기, 지구를 되살리는 대안적인 삶의 방식 등을 다루면서 자연과 인간은 '하나'임을 말합니다.
+     </p>
+    </a> 
+   </li>
+   
+   <li data-role="listdivider" data-theme="b">넷플릭스</li>
+   <li>
+    <a href="https://www.netflix.com/kr/title/81014008" target="_blank" rel="external">
+     <h3 style="color: red">씨스피라시(Seaspiracy)</h3>
+     <p class="ui-li-aside">2021</p>
+     <p>장르 : 자연 & 생태 다큐멘터리 / 상영시간 : 90분 </p>
+     <p>줄거리 : 씨스피라시(Seaspiracy) = '바다(Sea)' + '음모(Conspiracy)' <br>
+     그가 사랑하는 바다가 죽어간다. 인간이 그 경이의 세계를 파괴한다. 그리하여 카메라를 들고 바다로 나간 감독. 그가 맞닥뜨린 것은 전 세계에 걸친 부패의 그물이었다.</p>
+    </a>
+   </li>
+   <li>
+    <a href="https://www.netflix.com/kr/title/80033772" target="_blank" rel="external">
+     <h3 style="color: red">카우스피라시(Cowspiracy)</h3>
+     <p class="ui-li-aside">2014</p>
+     <p>장르 : 사회 & 문화 다큐멘터리 / 상영시간 : 90분 </p>
+     <p>줄거리 : 카우스피라시(Cowspiracy) = '소(Cow)' + '음모(Conspiracy)' <br>
+     공장식 축산 경영이 지구의 천연 자원을 어떻게 훼손시키고 있는지, 왜 이 위기를 환경 단체들이 대체로 무시해왔는지 살펴본다.</p>
+    </a>
+   </li>
+   <li>
+    <a href="https://www.netflix.com/kr/title/81045007" target="_blank" rel="external">
+     <h3 style="color: red">나의 문어 선생님</h3>
+     <p class="ui-li-aside">2020</p>
+     <p>장르 : 자연 & 생태 다큐멘터리 / 상영시간 : 85분 </p>
+     <p>줄거리 : 남아프리카의 바다, 해초 숲을 헤엄치던 영화감독이 특별한 문어를 만난다.<br>
+      경계에서 교감, 우정으로 발전하는 두 생명의 관계. 세계의 숨은 신비가 모습을 드러낸다.</p>
+    </a>
+   </li>  
+  </ul>
+  </div>
+  
+  <div data-role="footer" data-position="fixed" data-theme="b" class="ui-bar" style="text-align: center;">
+   <div data-role="controlgroup" data-type="horizontal">
+     <a href="#header" data-role="button" data-inline="true">맨 위로</a>
+     <a href="#panel1" data-role="button" data-inline="true">로그인</a><br>
+    <h6>© YSR</h6>
+   </div>
+  </div> 
+ </div>
+ 
+ <div data-role="page" id="dialog1" data-position="fixed">
+  <div data-role="header" data-theme="b">
+   <h1>'붉은 지구' 시리즈</h1>
+  </div>
+  <div data-role="content">
+   <p align="center" style="color: red; font-weight: bold;">[다큐 인사이트] 기후변화 특별기획 4부작 ‘붉은 지구’</p>
+   <a href="https://youtu.be/0a7y1DEuASM" target="_blank" rel="external" data-role="button">1편 엔드 게임 1.5℃</a>
+   <a href="https://youtu.be/Z9F_o51B6Rs" target="_blank" rel="external" data-role="button">2편 침묵의 바다</a>
+   <a href="https://youtu.be/I5eX3Bh6uc4" target="_blank" rel="external" data-role="button">3편 구상나무의 경고</a>
+   <a href="https://youtu.be/XYEjbD3rf78 " target="_blank" rel="external" data-role="button">4편 기후 혁명</a>
+  </div>
+ </div>
+ 
+</body>
+</html>

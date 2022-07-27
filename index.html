@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save The Earth</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+function name() {
+	alert("경고창");
+}
+
+function check() {
+	var userid = document.form1.userid.value;
+	var pwd = document.form1.pwd.value;
+	if(userid=="") {
+		alert("아이디를 입력하세요.")
+		document.form1.userid.focus();
+		return;
+	}
+	if(pwd=="") {
+		alert("비밀번호를 입력하세요.")
+		document.form1.pwd.focus();
+		ruturn;
+	}
+	document.form1.submit();
+}
+</script>
+</head>
+<body>
+ <div data-role="page" id="page1">
+   <div data-role="panel" id="panel1" data-display="overlay" data-theme="b">
+   <form name="form1" method="post" action="login_result.jsp">
+    <h1>로그인 패널</h1>
+    <label for="name">사용자명 : </label>
+    <input type="text" name="name" id="name" value="" data-mini="true" data-clear-btn="true">
+    <label for="password">비밀번호 : </label>
+    <input type="password" name="password" id="password" value="" data-mini="true" data-clear-btn="true">
+    <div class="ui-grid-a">
+     <div class="ui-block-a"><a href="#" data-role="button" data-rel="close">닫기</a></div>
+     <div class="ui-block-b"><input type="button" value="로그인" onclick="check()"></div>
+    </div>
+    <input type="button" value="회원가입" onClick="location.href='join_form.html'">
+   </form>
+  </div>
+ 
+  <div data-role="header" data-position="fixed" data-theme="b">
+   <h1>Save The Earth</h1>
+  </div>
+  <div data-role="content">
+  <div align="center">
+  <img src="images/container.jpg" style="max-width:1024px; max-height:800px; width:100%; height:100%;">
+  </div>
+   <ul data-role="listview" data-inset="true">
+    <li><a href="news.html" data-transition="slide">
+    환경소식</a></li>
+    <li><a href="campaign.html" data-transition="slide">
+    캠페인</a></li>   
+    <li><a href="movie.html" data-transition="slide">
+    다큐영상</a></li>
+    <li><a href="volunteer.html" data-transition="slide">
+    봉사</a></li>
+   </ul>
+  </div>
+  
+  <div data-role="footer" data-position="fixed" data-theme="b" class="ui-bar" style="text-align: center;">
+   <div data-role="controlgroup" data-type="horizontal">
+   	 <a href="#header" data-role="button" data-inline="true">맨 위로</a>
+     <a href="#panel1" data-role="button" data-inline="true">로그인</a><br>
+    <h6>© YSR</h6>
+   </div>
+  </div>
+</div>
+</body>
+</html>

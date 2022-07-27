@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+function name() {
+	alert("경고창");
+}
+
+function check() {
+	var userid = document.form1.userid.value;
+	var pwd = document.form1.pwd.value;
+	if(userid=="") {
+		alert("아이디를 입력하세요.")
+		document.form1.userid.focus();
+		return;
+	}
+	if(pwd=="") {
+		alert("비밀번호를 입력하세요.")
+		document.form1.pwd.focus();
+		ruturn;
+	}
+	document.form1.submit();
+}
+</script>
+</head>
+<body>
+ <div data-role="page" id="page1">
+  <div data-role="panel" id="panel1" data-display="overlay" data-theme="b">
+   <form name="form1" method="post" action="login_result.jsp">
+    <h1>로그인 패널</h1>
+    <label for="name">사용자명 : </label>
+    <input type="text" name="name" id="name" value="" data-mini="true" data-clear-btn="true">
+    <label for="password">비밀번호 : </label>
+    <input type="password" name="password" id="password" value="" data-mini="true" data-clear-btn="true">
+    <div class="ui-grid-a">
+     <div class="ui-block-a"><a href="#" data-role="button" data-rel="close">닫기</a></div>
+     <div class="ui-block-b"><input type="button" value="로그인" onclick="check()"></div>
+    </div>
+    <input type="button" value="회원가입" onClick="location.href='join_form.html'">
+   </form>
+  </div>
+  
+  <div data-role="header" id="header" data-position="fixed" data-theme="b">
+   <a href="index.html" data-icon="home">홈</a>
+   <h1>환경 소식</h1>
+  </div>
+  
+  <div data-role="content" style="background: #cbcb5b; color: white;">
+   <div align="center">
+	지구촌 환경 소식
+   </div>
+  </div>
+  
+  <div>
+   <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="검색 키워드를 입력하세요">
+  	<li><a href="https://n.news.naver.com/entertain/article/047/0002299763" target="_blank" rel="external">
+  	<img src="https://imgnews.pstatic.net/image/047/2021/01/22/0002299763_001_20210125134916429.jpg?type=w430" width="300px" height="300px">
+  	지구 온난화 주범이 이것? 환경단체가 숨기고 있는 비밀
+	<p>&lt;카우스피라시&gt;는 여러 논문 및 환경보고서들의 팩트체크에서 출발한다.<br>
+	축산업이 지구온난화 주범으로 직접 지목되는 이유 중 하나는 식용가축들이 소화과정에서 배출하는 메탄가스 때문이다. 식용가축 개체 수가 많아지면 많아질수록 메탄가스는 더 많이 배출된다. 전문출처로...</p>
+  	</a></li>
+	<li><a href="https://n.news.naver.com/article/214/0001210685?sid=103" target="_blank" rel="external">
+  	<img src=" ">
+  	지구촌 곳곳 이상기후‥한국은 폭염 주춤, 이유는?
+  	<p>40도 넘는 폭염에 신음하는 유럽과 북미 대륙.<br>
+	그런데, 지금 남반구도 기온이 높아서 한겨울인 남극 세종기지는 영상의 기온에 눈 대신 비가 내렸습니다. 전문출처로...</p>
+  	</a></li>	
+	<li><a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1006828825" target="_blank" rel="external">
+  	<img src="https://img.sbs.co.kr/newimg/news/20220719/201683672_1280.jpg" width="300px" height="300px">
+  	폭염 부르는 '블로킹 고기압', 우리 주변에도 있다
+  	 <p>유럽의 공기 흐름을 완전히 막아섰다고 해서 '블로킹 고기압'이라고 부르는데, 이 고기압 때문에 저기압이 빠져나가지 못하면서 더위가 이어지는 겁니다.<br>
+	 온난화로 극 지역과 중위도의 기온 차이가 줄어들면서 블로킹 고기압이 더 많이 만들어져, 지구 날씨는 갈수록 극단적으로 변해갈 거라는 전망입니다. 전문출처로...</p>
+  	</a></li>
+	<li><a href="https://www.thedailypost.kr/news/articleView.html?idxno=88122" target="_blank" rel="external">
+  	<img src="https://www.thedailypost.kr/news/photo/202207/88122_84571_3452.png" width="300px" height="300px">
+  	인간 활동으로 플랑크톤 절반 사라져...해양 산성화 가속
+  	 <p>식물성 플랑크톤은 바닷속 이산화탄소를 산소로 변환해 주는 핵심적 역할을 한다.<br>
+	그러나 과거 70년 이상에 걸쳐 플랑크톤의 수가 급격히 감소하면서 개체수의 50% 이상이 사라졌다고 고즈 재단은 지적했다. 전문출처로...</p>
+	</a></li>
+  	<li><a href="https://www.asiae.co.kr/article/2022032715184341438" target="_blank" rel="external">
+  	<img src="https://cphoto.asiae.co.kr/listimglink/1/2022032715172494253_1648361843.jpg"  width="300px" height="300px">  	
+  	 "2025년이면 완전히 사라질 것"…녹아내리는 인니 최고봉 만년설
+  	 <p>
+  	 최근 기후 변화로 인해 빙하가 계속해서 줄고 있다. 드위코리타 청장에 따르면 푼착자야산의 빙하는 기존 200㎢에서 단 1%인 2㎢만 남아 있다.<br>
+  	  북극과 남극 빙하가 녹는 현상뿐만 아니라 열대 빙하는 온난화에 더 큰 영향을 받기 때문에 기후 변화의 규모를 체감하는 척도가 된다. 전문출처로...<br>
+  	 </p>
+	</a></li>
+	<li><a href="https://www.newspenguin.com/news/articleView.html?idxno=12032" target="_blank" rel="external">
+  	<img src="https://cdn.newspenguin.com/news/photo/202207/12032_36310_5555.jpg"  width="300px" height="300px">
+  	대서양, 플랑크톤 90% 감소... 죽음의 바다 되나<br>
+  	 <p>
+  	 플랑크톤은 해양을 떠다니는 생물로 현미경으로 관찰해야 할 만큼 작은 크기부터 해파리정도의 크기까지 다양한 종류가 분포한다.<br>
+  	 이들은 해양 내 먹이사슬 최하단으로 해양 생태계를 유지시킬 뿐 아니라, 바다 내 이산화탄소를 저장하는 역할을 맡고 있다.<br>
+	 플랑크톤은 약 알칼리성 물에서 서식하는데, 자외선 차단제, 플라스틱, 의약품, 화학비료 등 화학물질이 유발한 해양 산성화로 생존이 어려워지고 있다. 전문출처로...<br>
+  	 </p>
+	</a></li>
+   </ul>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b" class="ui-bar" style="text-align: center;">
+   <div data-role="controlgroup" data-type="horizontal">
+     <a href="#header" data-role="button" data-inline="true">맨 위로</a>
+     <a href="#panel1" data-role="button" data-inline="true">로그인</a><br>
+    <h6>© YSR</h6>
+   </div>
+  </div>
+</div>
+</body>
+</html>
