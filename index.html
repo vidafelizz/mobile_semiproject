@@ -32,15 +32,15 @@ function check() {
 <body>
  <div data-role="page" id="page1">
    <div data-role="panel" id="panel1" data-display="overlay" data-theme="b">
-   <form name="form1" method="post" action="login_result.jsp">
-    <h1>로그인 패널</h1>
+   <form name="form1" action="login_result.jsp">
+    <h1>로그인</h1>
     <label for="name">사용자명 : </label>
-    <input type="text" name="name" id="name" value="" data-mini="true" data-clear-btn="true">
+    <input type="text" name="name" id="userid" value="" data-mini="true" data-clear-btn="true">
     <label for="password">비밀번호 : </label>
-    <input type="password" name="password" id="password" value="" data-mini="true" data-clear-btn="true">
+    <input type="password" name="password" id="pwd" value="" data-mini="true" data-clear-btn="true">
     <div class="ui-grid-a">
      <div class="ui-block-a"><a href="#" data-role="button" data-rel="close">닫기</a></div>
-     <div class="ui-block-b"><input type="button" value="로그인" onclick="check()"></div>
+     <div class="ui-block-b"><input type="submit" value="로그인" onclick="check()"></div>
     </div>
     <input type="button" value="회원가입" onClick="location.href='join_form.html'">
    </form>
@@ -54,13 +54,13 @@ function check() {
   <img src="images/container.jpg" style="max-width:1024px; max-height:800px; width:100%; height:100%;">
   </div>
    <ul data-role="listview" data-inset="true">
-    <li><a href="news.html" data-transition="slide">
+    <li><a href="news.html" data-transition="slide" rel="external">
     환경소식</a></li>
-    <li><a href="campaign.html" data-transition="slide">
+    <li><a href="campaign.html" data-transition="slide" rel="external">
     캠페인</a></li>   
-    <li><a href="movie.html" data-transition="slide">
+    <li><a href="movie.html" data-transition="slide" rel="external">
     다큐영상</a></li>
-    <li><a href="volunteer.html" data-transition="slide">
+    <li><a href="volunteer.html" data-transition="slide" rel="external">
     봉사</a></li>
    </ul>
   </div>

@@ -32,22 +32,22 @@ function check() {
 <body>
  <div data-role="page" id="page1">
   <div data-role="panel" id="panel1" data-display="overlay" data-theme="b">
-   <form name="form1" method="post" action="login_result.jsp">
-    <h1>로그인 패널</h1>
+   <form name="form1" action="login_result.jsp">
+    <h1>로그인</h1>
     <label for="name">사용자명 : </label>
-    <input type="text" name="name" id="name" value="" data-mini="true" data-clear-btn="true">
+    <input type="text" name="name" id="userid" value="" data-mini="true" data-clear-btn="true">
     <label for="password">비밀번호 : </label>
-    <input type="password" name="password" id="password" value="" data-mini="true" data-clear-btn="true">
+    <input type="password" name="password" id="pwd" value="" data-mini="true" data-clear-btn="true">
     <div class="ui-grid-a">
      <div class="ui-block-a"><a href="#" data-role="button" data-rel="close">닫기</a></div>
-     <div class="ui-block-b"><input type="button" value="로그인" onclick="check()"></div>
+     <div class="ui-block-b"><input type="submit" value="로그인" onclick="check()"></div>
     </div>
     <input type="button" value="회원가입" onClick="location.href='join_form.html'">
    </form>
   </div>
   
   <div data-role="header" id="header" data-position="fixed" data-theme="b" id="header">
-   <a href="index.html" data-icon="home">홈</a>
+   <a href="index.html" data-icon="home" rel="external">홈</a>
    <h1>다큐영상</h1>
   </div>
   
@@ -71,7 +71,7 @@ function check() {
    </a> 
    </li>
    <li>
-    <a href="#dialog1" data-role="button" data-rel="dialog">
+    <a href="#dialog1" data-role="button" rel="external">
      <h3 style="color: red">붉은지구 (4부작)</h3>
      <p class="ui-li-aside">2021</p>
      <p>장르 : 자연 & 생태 다큐멘터리 / 상영시간 : 48분, 4부작</p>
@@ -129,7 +129,7 @@ function check() {
   </div> 
  </div>
  
- <div data-role="page" id="dialog1" data-position="fixed">
+ <div data-role="dialog" id="dialog1" data-position="fixed">
   <div data-role="header" data-theme="b">
    <h1>'붉은 지구' 시리즈</h1>
   </div>

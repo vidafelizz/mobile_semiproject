@@ -7,26 +7,54 @@
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	   $("#submit").click(function() {
+	      if(confirm("제출하시겠습니까?")) {
+	      document.form1.action = "apply_result.jsp";
+	      document.form1.submit();
+	      }
+	   });
+	});
+</script>
 </head>
 <body>
-
  <div data-role="page" id="page1">
   <div data-role="header" data-position="fixed" data-theme="b">
    <a href="index.html" data-icon="home">홈</a>
-   <h1>지역별 봉사신청</h1>
+   <h1>회원가입</h1>
   </div>
+  
   <div data-role="content">
-   <p>본문영역(content)</p>
-   
-      <a data-role="button" data-rel="back">취소</a>
+  <form name="form1" method="post" action="apply_result.jsp">
+   <strong>*는 필수입력사항입니다.</strong><hr>
+   이름 * <input name="name" required="required">
+   생년월일 * <input type="date" name="birth" required="required">
+   전화번호 * <input name="hp" placeholder="010-1234-5678" required="required">
+   이메일 * <input type="email" name="email" placeholder="aaa@gmail.com" required="required">
+   희망하는 봉사 장소 * 
+   <select id="location" name="location" required="required">
+    <option>선택</option>
+    <option value="강남구">강남구</option>
+    <option value="서초구">서초구</option>
+    <option value="송파구">송파구</option>
+    <option value="강서구">강서구</option>
+   </select><br>
+   희망하는 봉사명 * 
+   <textarea rows="5" cols="25" name="intro" placeholder="희망하는 봉사 이름을 적어주세요" required></textarea>
+   <button type="submit" id="submit">제출하기</button>
+   <input type="reset" value="초기화">
+  </form>   
   </div>
+  
   <div data-role="footer" data-position="fixed" data-theme="b" class="ui-bar" style="text-align: center;">
    <div data-role="controlgroup" data-type="horizontal">
-     <a href="#header" data-role="button" data-inline="true">맨 위로</a>
+   	 <a href="#header" data-role="button" data-inline="true">맨 위로</a>
      <a href="#panel1" data-role="button" data-inline="true">로그인</a><br>
     <h6>© YSR</h6>
    </div>
   </div>
-</div>
+ </div>
+
 </body>
 </html>

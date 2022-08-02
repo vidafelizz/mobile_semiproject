@@ -32,40 +32,42 @@ function check() {
 <body>
  <div data-role="page" id="page1">
   <div data-role="panel" id="panel1" data-display="overlay" data-theme="b">
-   <form name="form1" method="post" action="login_result.jsp">
-    <h1>로그인 패널</h1>
+   <form name="form1" action="login_result.jsp">
+    <h1>로그인</h1>
     <label for="name">사용자명 : </label>
-    <input type="text" name="name" id="name" value="" data-mini="true" data-clear-btn="true">
+    <input type="text" name="name" id="userid" value="" data-mini="true" data-clear-btn="true">
     <label for="password">비밀번호 : </label>
-    <input type="password" name="password" id="password" value="" data-mini="true" data-clear-btn="true">
+    <input type="password" name="password" id="pwd" value="" data-mini="true" data-clear-btn="true">
     <div class="ui-grid-a">
      <div class="ui-block-a"><a href="#" data-role="button" data-rel="close">닫기</a></div>
-     <div class="ui-block-b"><input type="button" value="로그인" onclick="check()"></div>
+     <div class="ui-block-b"><input type="submit" value="로그인" onclick="check()"></div>
     </div>
     <input type="button" value="회원가입" onClick="location.href='join_form.html'">
    </form>
   </div>
   
   <div data-role="header" id="header" data-position="fixed" data-theme="b">
-   <a href="index.html" data-icon="home">홈</a>
+   <a href="index.html" data-icon="home" rel="external">홈</a>
    <h1>봉사</h1>
   </div>
   <div data-role="content" style="background: #376c56; color: white;" >
    <div align="center">
-    <p><strong>수도권 봉사활동</strong></p>
+    <p><strong>서울특별시 자원봉사센터</strong></p>
    </div>
   </div>
    <div>
      <ul data-role="listview" data-inset="true" data-filter="true">
-  	  <li><a href="choose_restaurant.html">서울특별시 <span class="ui-li-count">3곳</span></a></li>
-  	  <li><a href="choose_restaurant.html">인천광역시<span class="ui-li-count">4곳</span></a></li>
-  	  <li><a href="choose_restaurant.html">경기 <span class="ui-li-count">6곳</span></a></li>
+  	  <li><a href="#gangnam" data-transition="slidedown" rel="external">강남구 자원봉사센터<span class="ui-li-count">new</span></a></li>
+  	  <li><a href="#seocho" data-transition="slidedown" rel="external">서초구 자원봉사센터<span class="ui-li-count">new</span></a></li>
+  	  <li><a href="#songpa" data-transition="slidedown" rel="external">송파구 자원봉사센터<span class="ui-li-count">new</span></a></li>
+  	  <li><a href="#gangseo" data-transition="slidedown" rel="external">강서구 자원봉사센터<span class="ui-li-count">new</span></a></li>
      </ul>
    </div>
    <br>
-   <a href="apply_form.html" data-role="button" data-rel="dialog"> 봉사 신청서 작성하기</a>
+   <hr>
+   <br>
+   <a href="apply_form.html" data-role="button" rel="external">봉사 신청서 작성하기</a>
 
- 
   <div data-role="footer" data-position="fixed" data-theme="b" class="ui-bar" style="text-align: center;">
    <div data-role="controlgroup" data-type="horizontal">
      <a href="#header" data-role="button" data-inline="true">맨 위로</a>
@@ -74,5 +76,249 @@ function check() {
    </div>
   </div>
 </div>
+
+<!-- 강남 -->
+<div data-role="page" id="gangnam">
+  <div data-role="header" id="header" data-position="fixed" data-theme="b">
+   <a href="index.html" data-icon="home" rel="external">홈</a>
+   <a href="volunteer.html" data-icon="arrow-l" rel="external">이전으로</a>
+   <h1>강남구 자원봉사센터</h1>
+  </div>
+  <div data-role="content">
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h1>강남구 자원봉사센터</h1>
+     <p><strong>지역의 욕구와 변화에 따른 자원봉사활동을 운영하여<br>
+	  자원봉사네트워크 활성화를 통해 자원봉사 나눔의 가치와 문화 확산을 실천합니다.</strong></p>
+     <p>주요사업 </p>
+     <ul>
+		  <li> 생애주기별 자원봉사 </li>
+		  <li> 활성화 자원봉사 </li>
+		  <li> 공동체 자원봉사 </li>
+     </ul>
+    </div>
+    <div class="ui-block-b">
+     <p><img alt="" src="images/gangnam.png"></p>
+     <p><a href="http://gangnam.seoulvc.kr/front" rel="external" data-role="button">웹사이트</a></p>
+    </div>
+   </div>
+   <hr>
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h2>주소</h2>
+     <p>서울특별시 강남구 봉은사로 320 강남구비즈니스센터 9층</p>
+    </div>
+    <div class="ui-block-b">
+     <img src="images/map_gangnam.png" width="600px">
+    </div>
+   </div>
+   <div>
+    <a href="https://www.google.co.kr/maps/place/%EA%B0%95%EB%82%A8%EA%B5%AC%EC%9E%90%EC%9B%90%EB%B4%89%EC%82%AC%EC%84%BC%ED%84%B0/data=!3m1!4b1!4m5!3m4!1s0x357ca475235cfaab:0x4fbe9eedad31dda5!8m2!3d37.5094012!4d127.0419368?hl=ko" 
+    data-role="button" data-icon="location" rel="external">구글맵에서 찾기</a>
+    <a href="tel:02-3445-5152" data-role="button" data-icon="phone" rel="external">전화번호</a>
+    <a href="mailto:gangnamvc@daum.net" data-role="button" data-icon="mail" rel="external">이메일</a>
+   </div>
+   <hr>
+   <div>
+    <form>
+     <label for="select-choice">
+      <h2>사용자 평가</h2>
+     </label>
+     <select name="select-choice" id="select-choice" 
+     data-native-menu="false" data-theme="b">
+      <option value="one">Bad ☆</option>
+      <option value="two">Good ☆☆</option>
+      <option value="three" selected="selected">Great ☆☆☆</option>
+      <option value="four">Excellent ☆☆☆☆</option>
+     </select>
+    </form>
+   </div>
+  </div>
+ </div>
+ 
+ <!-- 서초 -->
+<div data-role="page" id="seocho">
+  <div data-role="header" id="header" data-position="fixed" data-theme="b">
+   <a href="index.html" data-icon="home" rel="external">홈</a>
+   <a href="volunteer.html" rel="external" data-icon="arrow-l">이전으로</a>
+   <h1>서초구 자원봉사센터</h1>
+  </div>
+  <div data-role="content">
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h1>서초구 자원봉사센터</h1>
+     <p><strong>서초구민이라면 누구나 쉽게 자원봉사에 참여할 수 있는 환경을 조성하여<br>
+     나눔과 참여가 있는 살기 좋은 서초를 만들어 나가고 있습니다.
+     </strong></p>
+     <p>주요사업 </p>
+     <ul>
+		  <li> 동네와 일터에서 재능을 나누는 구민 </li>
+		  <li> 일상의 공간에서 나눔을 실천하는 구민 </li>
+		  <li> 동네의 문제를 스스로 해결하는 구민 </li>
+		  <li> 자원봉사의 의미와 가치를 소통하는 구민 </li>
+     </ul>
+    </div>
+    <div class="ui-block-b">
+     <p><img alt="" src="https://seochov.or.kr/"></p>
+     <p><a href="https://seochov.or.kr/" rel="external" data-role="button">웹사이트</a></p>
+    </div>
+   </div>
+   <hr>
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h2>주소</h2>
+     <p>서울특별시 서초구 강남대로 201 (양재동, 서초문화예술회관) 2층 서초구자원봉사센터</p>
+    </div>
+    <div class="ui-block-b">
+     <img alt="" src="images/map_seocho.png" width="600px">
+    </div>
+   </div>
+   <div>
+    <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%B4%88%EA%B5%AC%EC%9E%90%EC%9B%90%EB%B4%89%EC%82%AC%EC%84%BC%ED%84%B0/data=!3m1!4b1!4m5!3m4!1s0x357ca14a147ba0d9:0x3c1a3c6c81b6eec4!8m2!3d37.4817555!4d127.0357453?hl=ko" 
+    data-role="button" data-icon="location" rel="external">구글맵에서 찾기</a>
+    <a href="tel:02-573-9252" data-role="button" data-icon="phone" rel="external">전화번호</a>
+    <a href="mailto:seochov@seochov.or.kr" data-role="button" data-icon="mail" rel="external">이메일</a>
+   </div>
+   <hr>
+   <div>
+    <form>
+     <label for="select-choice">
+      <h2>사용자 평가</h2>
+     </label>
+     <select name="select-choice" id="select-choice" 
+     data-native-menu="false" data-theme="b">
+      <option value="one">Bad ☆</option>
+      <option value="two">Good ☆☆</option>
+      <option value="three" selected="selected">Great ☆☆☆</option>
+      <option value="four">Excellent ☆☆☆☆</option>
+     </select>
+    </form>
+   </div>
+  </div>
+ </div>
+ 
+<!-- 송파 -->
+<div data-role="page" id="songpa">
+  <div data-role="header" id="header" data-position="fixed" data-theme="b">
+   <a href="index.html" data-icon="home" rel="external">홈</a>
+   <a href="volunteer.html" data-icon="arrow-l" rel="external">이전으로</a>
+   <h1>송파구 자원봉사센터</h1>
+  </div>
+  <div data-role="content">
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h1>송파구 자원봉사센터</h1>
+     <p><strong>서로 힘이 되어주는 송파</strong></p>
+     <p>주요사업 </p>
+     <ul>
+		  <li> 자원봉사 교육 및 홍보</li>
+		  <li> 자원봉사 진흥 </li>
+		  <li> 자원봉사 관리 </li>
+		  <li> 청소년 자원봉사 육성 </li>
+		  <li> 자원봉사 캠프설치 및 운영 </li>
+		  <li> 자원봉사자 대축제 </li>
+     </ul>
+    </div>
+    <div class="ui-block-b">
+     <p><img alt="" src="images/songpa.png"></p>
+     <p><a href="http://songpavc.seoulvc.kr/front" rel="external" data-role="button">웹사이트</a></p>
+    </div>
+   </div>
+   <hr>
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h2>주소</h2>
+     <p>서울시 송파구 백제고분로242(삼전동) 송파구민회관 2층 송파구자원봉사센터</p>
+    </div>
+    <div class="ui-block-b">
+     <img alt="" src="images/map_songpa.png" width="600px">
+    </div>
+   </div>
+   <div>
+    <a href="https://www.google.co.kr/maps/place/%EC%86%A1%ED%8C%8C%EA%B5%AC%EC%9E%90%EC%9B%90%EB%B4%89%EC%82%AC%EC%84%BC%ED%84%B0/data=!3m1!4b1!4m5!3m4!1s0x357ca5b0a3e8e59f:0x4b5f269d745ba4e4!8m2!3d37.502219!4d127.0933384?hl=ko" 
+    data-role="button" data-icon="location" rel="external">구글맵에서 찾기</a>
+    <a href="tel:02-2202-1365" data-role="button" data-icon="phone" rel="external">전화번호</a>
+    <a href="mailto:songpavc@naver.com" data-role="button" data-icon="mail" rel="external">이메일</a>
+   </div>
+   <hr>
+   <div>
+    <form>
+     <label for="select-choice">
+      <h2>사용자 평가</h2>
+     </label>
+     <select name="select-choice" id="select-choice" 
+     data-native-menu="false" data-theme="b">
+      <option value="one">Bad ☆</option>
+      <option value="two">Good ☆☆</option>
+      <option value="three" selected="selected">Great ☆☆☆</option>
+      <option value="four">Excellent ☆☆☆☆</option>
+     </select>
+    </form>
+   </div>
+  </div>
+ </div>
+
+ <!-- 강서 -->
+<div data-role="page" id="gangseo">
+  <div data-role="header" id="header" data-position="fixed" data-theme="b">
+   <a href="index.html" data-icon="home" rel="external">홈</a>
+   <a href="volunteer.html" data-icon="arrow-l" rel="external">이전으로</a>
+   <h1>강서구 자원봉사센터</h1>
+  </div>
+  <div data-role="content">
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h1>강서구 자원봉사센터</h1>
+     <p><strong>지역의 욕구와 변화에 따른 자원봉사활동을 운영하여<br>
+	  자원봉사네트워크 활성화를 통해 자원봉사 나눔의 가치와 문화 확산을 실천합니다.</strong></p>
+     <p>주요사업 </p>
+     <ul>
+		  <li> 자원봉사자 모집·배치 </li>
+		  <li> 자원봉사자 상담·교육 </li>
+		  <li> 자원봉사 프로그램 개발 운영</li>
+		  <li> 자원봉사 활동 홍보·실적관리</li>
+		  <li> 자원봉사 활동 발굴·운영지원</li>
+		  <li> 자원봉사 활동 육성·지원</li>
+     </ul>
+    </div>
+    <div class="ui-block-b">
+     <p><img alt="" src="images/gangseo.png"></p>
+     <p><a href="http://gangseo.seoulvc.kr/front" rel="external" data-role="button">웹사이트</a></p>
+    </div>
+   </div>
+   <hr>
+   <div class="ui-grid-a">
+    <div class="ui-block-a">
+     <h2>주소</h2>
+     <p>서울특별시 강서구 공항대로 501 강서구자원봉사센터</p>
+    </div>
+    <div class="ui-block-b">
+     <img alt="" src="images/map_gangseo.png" width="600px">
+    </div>
+   </div>
+   <div>
+    <a href="https://www.google.co.kr/maps/place/%EA%B0%95%EB%82%A8%EA%B5%AC%EC%9E%90%EC%9B%90%EB%B4%89%EC%82%AC%EC%84%BC%ED%84%B0/data=!3m1!4b1!4m5!3m4!1s0x357ca475235cfaab:0x4fbe9eedad31dda5!8m2!3d37.5094012!4d127.0419368?hl=ko" 
+    data-role="button" data-icon="location" rel="external">구글맵에서 찾기</a>
+    <a href="tel:02-2600-5331" data-role="button" data-icon="phone" rel="external">전화번호</a>
+    <a href="mailto:26005331@gangseo.seoul.kr" data-role="button" data-icon="mail" rel="external">이메일</a>
+   </div>
+   <hr>
+   <div>
+    <form>
+     <label for="select-choice">
+      <h2>사용자 평가</h2>
+     </label>
+     <select name="select-choice" id="select-choice" 
+     data-native-menu="false" data-theme="b">
+      <option value="one">Bad ☆</option>
+      <option value="two">Good ☆☆</option>
+      <option value="three" selected="selected">Great ☆☆☆</option>
+      <option value="four">Excellent ☆☆☆☆</option>
+     </select>
+    </form>
+   </div>
+  </div>
+ </div>
+ 
 </body>
 </html>
